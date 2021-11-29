@@ -1,0 +1,9 @@
+---
+- name: install htttpd packages and list git configs
+  hosts: all
+  tasks:  
+    - name: Install apache httpd
+      apt:
+        name: apache2
+        state: present
+    

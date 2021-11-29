@@ -1,0 +1,10 @@
+---
+- name: looping
+  hosts: all
+  become: yes
+  tasks:
+   - name: creating file and capturing
+     shell: "{{item}}"
+     loop:
+       - testuser1
+       - testuser2
